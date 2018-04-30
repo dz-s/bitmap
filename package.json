@@ -1,0 +1,23 @@
+{
+  "name": "bitmap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teriyakigod2/bitmap.git"
+  },
+  "author": "teriyakigod2",
+  "license": "ISC",
+  "gypfile": true,
+  "bugs": {
+    "url": "https://github.com/teriyakigod2/bitmap/issues"
+  },
+  "homepage": "https://github.com/teriyakigod2/bitmap#readme",
+  "dependencies": {
+    "nan": "^2.10.0"
+  }
+}

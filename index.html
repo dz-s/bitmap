@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script src="/dist/bundle.js"/>
+    </head>
+<body>
+    <div id='board'>
+        <svg  width="676" height="104">
+            <g id="bits" transform="translate(16, 20)"> </g>
+        </svg>
+    </div>
+</body>
+
+<script>
+
+    function drawChar(str) {
+        fetch('/bitmap?char=' + str)
+            .then(function (resp) { return resp.json() })
+            .then(function (resp) {
+                console.log(resp[0]);
+                renderLayout(10, 10);
+            });
+    }
+
+        function renderLayout(x, y) {
+        var bits = document.getElementById('bits');
+        for (let i = 0; i < x; ++i) {
+            for (let j = 0; j < y; ++j) {
+                bits.appendChild(<g dttransform="translate(16, 0)">
+                    <rect width="10" height="10" x="13" y="0" fill="#ebedf0"></rect>
+                </g>);
+            }
+        }
+
+    }
+</script>
+
+</html>
